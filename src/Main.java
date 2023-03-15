@@ -40,6 +40,7 @@ public class Main {
         }
         System.out.println("Ваша корзина покупок:");
         int sum = 0;
+
         for (int i = 0; i < products.length; i++) {  // проходим по каждому элементу выводим корзину, проверяем наличие акционных товаров
             if (counts[i] != 0) {
                 isOnSale = false;
@@ -48,7 +49,7 @@ public class Main {
                         isOnSale = true;
                     }
                 }
-                if (isOnSale) {
+                if (isOnSale) { //считаем сумму корзины
                     sum += prices[i] * (counts[i] / 3 * 2 + counts[i] % 3);
                 } else {
                     sum += prices[i] * counts[i];
